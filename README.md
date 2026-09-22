@@ -1,6 +1,8 @@
-<p align="center"><img src="logo/logo.jpg" alt="Strokera 标志" width="220"></p>
+<p align="center"><img src="brand/assets/github-header.png" alt="Strokera — The Painting Process Protocol" width="100%"></p>
 
 # Strokera
+
+[品牌横图与 UI 配图](brand/README.md) · [视觉展示页](brand/showcase.html)
 
 **A painting protocol, not a one-click image generator.**
 
