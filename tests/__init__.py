@@ -1,0 +1,1 @@
+"""Strokera test suite."""

@@ -1,0 +1,17 @@
+{
+  "protocol": "spp/0.1",
+  "title": "River study / 函数与笔触",
+  "canvas": {"width": 960, "height": 540, "background": "#F3EBDD"},
+  "layers": [
+    {"id": "wash", "name": "远景底色"},
+    {"id": "current", "name": "河流曲线"},
+    {"id": "marks", "name": "前景笔触"}
+  ],
+  "strokes": [
+    {"id": "horizon", "layer_id": "wash", "path": [[0, 235], [260, 220], [580, 240], [960, 205]], "width": 36, "color": "#CFBFA6", "opacity": 0.7},
+    {"id": "flow-1", "layer_id": "current", "parametric": {"x": "t", "y": "335 + 28*sin(t/75)", "from": 0, "to": 960, "steps": 220}, "width": 24, "color": "#2D5962", "opacity": 0.85},
+    {"id": "flow-2", "layer_id": "current", "parametric": {"x": "t", "y": "400 + 18*sin(t/62 + 1)", "from": 0, "to": 960, "steps": 220}, "width": 9, "color": "#A05F41", "opacity": 0.8},
+    {"id": "reed-1", "layer_id": "marks", "path": [[170, 470], [178, 420], [201, 368]], "width": 8, "color": "#433D32"},
+    {"id": "reed-2", "layer_id": "marks", "path": [[183, 470], [166, 405], [155, 380]], "width": 5, "color": "#433D32"}
+  ]
+}
