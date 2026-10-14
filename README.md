@@ -1,4 +1,4 @@
-<p align="center"><img src="brand/assets/github-header.png" alt="Strokera — The Painting Process Protocol" width="100%"></p>
+
 
 <p align="center">
   <img src="brand/assets/github-header.png" alt="Strokera" width="100%" />
