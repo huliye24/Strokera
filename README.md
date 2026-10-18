@@ -39,7 +39,7 @@ Strokera focuses its long-term research on five foundations:
 
 ## Creative directions
 
-The initial production system is built around fashion-oriented visual work. Each creative direction is a **separate branch derived from an authorized original photographic reference**; generated outputs are not silently recycled as new reference photographs.
+The initial production system is built around fashion-oriented visual work. In source-fidelity workflows, each direction is a **separate branch derived from an authorized original photographic reference**. Character-IP creative work instead starts from an authorized, approved **identity reference set**. Generated outputs are never silently recycled as new originals.
 
 ### 01 · Minimalist Fashion Line Art
 
@@ -54,7 +54,7 @@ Develop a distinctive composition from an approved visual base, with graphic lin
 Remove the person from a fashion photograph while retaining **the visible garment's original structure, placement, folds, and accessories**. Unknown or hidden regions must be identified as inferred, left unresolved, or reviewed by a human — never presented as an exact reconstruction without evidence.
 
 ### 04 · Character-IP Creative Transformation (proposed)
- 
+
 **Preserve the character's identity, not the source image's pose, costume, or scene.** This is a separate `IDENTITY_CREATIVE` mode: protect recognizable facial and character-defining traits while deliberately reimagining gestures, occupations, wardrobe, scenes and storytelling. A quant researcher on a racing bicycle, for example, should be a genuine new character composition—not a static portrait with financial icons added around it.
 
 Do not confuse this with the stricter `SOURCE_FIDELITY` mode needed for garment/photographic reconstruction. **Identity Consistency × Creative Transformation (ICCT)** is a dual evaluation objective, with independent human reviews for identity preservation and meaningful creativity. Read the proposed [ICCT Character-IP Protocol](docs/IDENTITY_CREATIVE_TRANSFORMATION_PROTOCOL.md); scoring and generative workflows are **not yet implemented**.
