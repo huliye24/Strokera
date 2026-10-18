@@ -25,7 +25,7 @@
 
 **Image generation is only the beginning.** A beautiful image on a screen is not yet a reliable production asset. Between a photographic reference and a finished print lie difficult problems: keeping a garment unchanged, preserving the intent of a line, removing a subject without inventing fabric, preparing edges and colors for print, and repeating the same production decisions across thousands of assets.
 
-Strokera focuses its long-term research on four foundations:
+Strokera focuses its long-term research on five foundations:
 
 | Foundation                  | The question we work on                                      |
 | --------------------------- | ------------------------------------------------------------ |
@@ -33,12 +33,13 @@ Strokera focuses its long-term research on four foundations:
 | **Controlled processing**   | Can the artist inspect, modify, approve, and constrain each transformation rather than accept an opaque result? |
 | **Print reproduction**      | Can screen artwork be reliably prepared, checked, proofed, and reproduced on physical media? |
 | **Process reproducibility** | Can a production run be traced to its source, model or algorithm, settings, reviews, and output versions? |
+| **Character identity & creative transformation** | Can the same recognizable character IP inhabit genuinely new poses, costumes, professions, scenes, and stories without identity drift? |
 
 **Our principle: AI creates possibilities. Measurement establishes evidence. Engineering makes good results repeatable. Artists decide what is worth making.**
 
 ## Creative directions
 
-The initial production system is built around fashion-oriented visual work. Each creative direction is a **separate branch derived from an authorized original photographic reference**; generated outputs are not silently recycled as new reference photographs.
+The initial production system is built around fashion-oriented visual work. In source-fidelity workflows, each direction is a **separate branch derived from an authorized original photographic reference**. Character-IP creative work instead starts from an authorized, approved **identity reference set**. Generated outputs are never silently recycled as new originals.
 
 ### 01 · Minimalist Fashion Line Art
 
@@ -51,6 +52,12 @@ Develop a distinctive composition from an approved visual base, with graphic lin
 ### 03 · Floating Garment Studies
 
 Remove the person from a fashion photograph while retaining **the visible garment's original structure, placement, folds, and accessories**. Unknown or hidden regions must be identified as inferred, left unresolved, or reviewed by a human — never presented as an exact reconstruction without evidence.
+
+### 04 · Character-IP Creative Transformation (proposed)
+
+**Preserve the character's identity, not the source image's pose, costume, or scene.** This is a separate `IDENTITY_CREATIVE` mode: protect recognizable facial and character-defining traits while deliberately reimagining gestures, occupations, wardrobe, scenes and storytelling. A quant researcher on a racing bicycle, for example, should be a genuine new character composition—not a static portrait with financial icons added around it.
+
+Do not confuse this with the stricter `SOURCE_FIDELITY` mode needed for garment/photographic reconstruction. **Identity Consistency × Creative Transformation (ICCT)** is a dual evaluation objective, with independent human reviews for identity preservation and meaningful creativity. Read the proposed [ICCT Character-IP Protocol](docs/IDENTITY_CREATIVE_TRANSFORMATION_PROTOCOL.md); scoring and generative workflows are **not yet implemented**.
 
 These are starting production applications, not limits on the protocol or future artistic practices.
 
@@ -114,6 +121,8 @@ Initial MATLAB research tracks (proposed):
 | `MASK`         | Subject/background separation, transparent-edge halos, and alpha-matte quality |
 | `GARMENT`      | Garment geometry, landmark displacement, silhouette fidelity, and detail preservation |
 | `UPSCALE`      | Resolution enhancement without fabricated seams, textures, or garment features |
+| `IDENTITY`     | Character identity continuity across poses, costumes and camera angles (proposed) |
+| `CREATIVE`     | Evaluate meaningful creative change independently of identity continuity (proposed) |
 | `PRINT`        | Physical-size resolution, color profiles, proofing, media behavior, and output validation |
 
 Experiments should save source hashes, code and environment versions, parameters, baselines, metrics, visual comparisons, and a clear accepted/rejected conclusion. Metrics support decisions; they do not replace artistic judgment.
@@ -196,7 +205,7 @@ A useful experimental reference is **300 PPI at intended print dimensions** for 
 
 1. **Preserve the original.** Never modify or replace a rights-cleared source photograph in place.
 2. **One reference, independent branches.** Avoid cumulative drift from repeatedly transforming previously generated images.
-3. **Protect known geometry.** Do not silently redesign clothes, faces, body proportions, or accessory positions.
+3. **Apply mode-specific constraints.** In `SOURCE_FIDELITY` preserve locked geometry and garments; in `IDENTITY_CREATIVE` preserve approved character identity while explicitly allowing new poses, costumes, scenes and roles.
 4. **Separate observation from invention.** Identify inferred areas and generated details, especially in garment reconstruction.
 5. **Record the process.** Keep edits, parameters, approvals, and versioned outputs inspectable.
 6. **Test before scaling.** Promote algorithms into production only with baselines, measurable evidence, and regression coverage.
@@ -211,6 +220,7 @@ A useful experimental reference is **300 PPI at intended print dimensions** for 
 | [`src/strokera/protocol_cli.py`](src/strokera/protocol_cli.py) | Current command-line interface                               |
 | [`docs/SPP-0.1.md`](docs/SPP-0.1.md)                         | Implemented protocol contract                                |
 | [`docs/PROJECT.md`](docs/PROJECT.md)                         | Original charter and SPP milestones                          |
+| [`docs/IDENTITY_CREATIVE_TRANSFORMATION_PROTOCOL.md`](docs/IDENTITY_CREATIVE_TRANSFORMATION_PROTOCOL.md) | Proposed character-IP creative transformation and evaluation protocol |
 | [`examples/`](examples/)                                     | Runnable SPP examples                                        |
 | [`tests/`](tests/)                                           | Existing tests                                               |
 | [`src/strokera/core/`](src/strokera/core/) · [`planning/`](src/strokera/planning/) · [`optimize/`](src/strokera/optimize/) | Older research modules; not yet part of the new protocol CLI |
